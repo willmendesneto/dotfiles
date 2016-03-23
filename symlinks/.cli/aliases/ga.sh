@@ -1,0 +1,6 @@
+alias g="git"
+alias ga="git add"
+alias gco="git checkout"
+alias gboom="git clean -xfd"
+alias gst="git status | grep --color=always '^[^a-z]\+\(new file:\|modified:\)' | cut -d'#' -f2-"
+alias gnp="git-notpushed"
