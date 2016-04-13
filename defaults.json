@@ -39,21 +39,6 @@
     "com.apple.desktopservices": {
         "DSDontWriteNetworkStores": true
     },
-    "com.apple.dock": {
-        "expose-animation-duration": 0.1,
-        "expose-group-by-app": true,
-        "orientation": "left",
-        "show-process-indicators": false,
-        "tilesize": 48,
-        "showhidden": true,
-        "autohide": true,
-        "autohide-delay": 0,
-        "autohide-time-modifier": 0.2,
-        "wvous-tr-corner": 5,
-        "wvous-tr-modifier": 0,
-        "persistent-apps": [],
-        "launchanim": false
-    },
     "com.apple.finder": {
         "FK_AppCentricViewStyle": "clmv",
         "FXArrangeGroupViewBy": "Name",
