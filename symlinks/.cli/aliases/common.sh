@@ -52,3 +52,5 @@ alias update="sudo softwareupdate -i -a; brew update; brew upgrade --all; brew c
 alias dm-env="docker-machine env"
 alias dm-eval="eval $(docker-machine env default)"
 alias gulp-local="./node_modules/.bin/gulp"
+alias chrome-insecure="open -a Google\ Chrome --args --disable-web-security --user-data-dir"
+alias ci="open -a Google\ Chrome --args --disable-web-security --user-data-dir"
