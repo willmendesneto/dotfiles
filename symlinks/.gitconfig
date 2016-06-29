@@ -69,3 +69,7 @@
 
 [heroku]
 	account = personal
+
+[grep]
+	extendRegexp = true
+	lineNumber = true
