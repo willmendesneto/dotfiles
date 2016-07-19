@@ -32,8 +32,13 @@
   ignoreSubmodules = dirty
 
 [alias]
+  gui = !sh -c '/usr/local/git/libexec/git-core/git-gui'
+	grep = grep --break --heading --line-number
+	serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+	undo = reset --hard HEAD
+	who = shortlog -sn
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   l = log
-  lg = log --graph --pretty=format:'%C(yellow)%h %Cblue%aN %Cgreen%ar %Creset%s'
   ls = log --stat
   last = log -1 HEAD
   w = log --name-status #short whatchanged
