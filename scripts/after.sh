@@ -46,13 +46,6 @@ git_repo () {
 }
 
 # ------------------------------------------------------------------------------
-
-log "Linking Sublime Settings…"
-mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
-rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-ln -sf ~/SpiderOak\ Hive/Sublime/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-
-# ------------------------------------------------------------------------------
 log "Updating iterm schemes…"
 git_repo https://github.com/mbadolato/iTerm2-Color-Schemes.git ~/.iterm-schemes
 
@@ -64,20 +57,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/willmendesneto/vhost.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/vhost
 
-# ------------------------------------------------------------------------------
-log "Installing latest ruby…"
-TMP_RC=$(mktemp -t rcfile); cat << EOF > $TMP_RC
-  LATEST_RUBY=\$(curl -s  https://raw.githubusercontent.com/postmodern/ruby-versions/master/ruby/versions.txt | sort | tail -n1)
-  export RBENV_ROOT=/usr/local/var/rbenv
-  eval "\$(rbenv init -)"
-
-  rbenv install \$LATEST_RUBY --skip-existing
-  rbenv global \$LATEST_RUBY
-
-  rm -f $TMP_RC
-EOF
-zsh --rcs $TMP_RC
-unset TMP_RC
 
 # ------------------------------------------------------------------------------
 log "Installing NodeJS…"
@@ -94,13 +73,6 @@ done
 log "Installing vim-plug…"
 curl -s -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# ------------------------------------------------------------------------------
-log "Setting up docker-machine…"
-machine_name=default
-docker-machine ls | tail -n +2 | awk '{print $1}' | grep -q $machine_name || \
-docker-machine create --driver virtualbox $machine_name
-eval "$(docker-machine env default)"
 
 # ------------------------------------------------------------------------------
 log "Cleaning up brew…"

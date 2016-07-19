@@ -5,7 +5,6 @@
     "./scripts/login.items.sh",
     "./scripts/spectacle.defaults.sh",
     "./scripts/restart.affected.sh",
-    "./scripts/docker4work.sh",
     "echo '\n-- PLEASE RESTART YOUR LAPTOP --\n'"
   ],
   "casks": [
@@ -14,7 +13,6 @@
     "atom",
     "franz",
     "caffeine",
-    "dockertoolbox",
     "duet",
     "firefox",
     "fitbit-connect",
@@ -54,7 +52,6 @@
     "caskroom/cask/brew-cask",
     "chromedriver",
     "cowsay",
-    "docker",
     "figlet",
     "git",
     "git-crypt",
@@ -68,8 +65,6 @@
     "jq",
     "phantomjs",
     "pyenv",
-    "rbenv --HEAD",
-    "rbenv-gem-rehash",
     "redis",
     "ruby-build",
     "toilet",

@@ -1,25 +1,30 @@
 #!/usr/bin/env bash
 
 # Install NVM
-cd /Users/willmendesneto
+cd $HOME
 apm install Stylus \
+Sublime-Style-Column-Selection \
+atom-node-debugger \
 atom-react-native-autocomplete \
 atom-react-native-css \
 atom-typescript \
+auto-reveal-in-sidebar \
 autocomplete-paths \
 blame \
+coffee-compile \
 editorconfig \
 emmet \
+file-icons \
+git-plus \
+highlight-selected \
+language-babel \
 language-coffeescript-html \
 language-javascript-jsx \
 linter \
+merge-conflicts \
 minimap \
 open-plus \
-selection-highlight \
-merge-conflicts \
-git-plus \
 pigments \
-set-syntax \
 project-plus \
-file-icons \
-language-babel
+set-syntax \
+sort-lines
