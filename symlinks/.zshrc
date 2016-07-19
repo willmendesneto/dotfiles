@@ -45,7 +45,8 @@ export UPDATE_ZSH_DAYS=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z ruby rvm node vhost nvm npm frontend-search git git-extras bundler docker zsh-autosuggestions zsh-syntax-highlighting)
+
+plugins=(z ruby rvm node nvm npm frontend-search git-extras bundler docker httpie colored-man colored-man-pages zsh-syntax-highlighting zsh-autosuggestions vhost)
 
 # User configuration
 
