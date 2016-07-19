@@ -83,16 +83,6 @@ export EDITOR='vim'
 # bindkey -M viins 'jj' vi-cmd-mode
 bindkey '^R' history-incremental-search-backward
 
-# TODO: Move to external files
-
-# Initialize rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-#Initialize docker-machine
-[ $(docker-machine status default) = 'Running' ] || (echo 'Booting docker-machine…' && docker-machine restart default)
-eval "$(docker-machine env default)"
-
 # Run Archey
 archey --color
 
