@@ -46,7 +46,7 @@ export UPDATE_ZSH_DAYS=1
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(z ruby rvm node nvm npm frontend-search git-extras bundler docker httpie colored-man colored-man-pages zsh-syntax-highlighting zsh-autosuggestions vhost)
+plugins=(z git-open ruby rvm node nvm npm frontend-search git-extras bundler docker httpie colored-man colored-man-pages zsh-syntax-highlighting zsh-autosuggestions vhost)
 
 # User configuration
 
