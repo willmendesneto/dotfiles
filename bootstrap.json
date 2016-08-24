@@ -3,7 +3,6 @@
     "./scripts/after.sh",
     "./scripts/atom-packages-install.sh",
     "./scripts/login.items.sh",
-    "./scripts/spectacle.defaults.sh",
     "./scripts/restart.affected.sh",
     "echo '\n-- PLEASE RESTART YOUR LAPTOP --\n'"
   ],
