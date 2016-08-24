@@ -43,4 +43,4 @@ function git-full-sync() {
   fi
 }
 
-alias sync-repo="git-full-sync";
+alias full-sync="git-full-sync";
