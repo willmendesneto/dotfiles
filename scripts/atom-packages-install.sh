@@ -5,7 +5,6 @@ cd $HOME
 apm install Stylus \
 Sublime-Style-Column-Selection \
 atom-node-debugger \
-atom-react-native-css \
 atom-typescript \
 auto-reveal-in-sidebar \
 autocomplete-paths \
