@@ -56,7 +56,12 @@ log "Installing Oh My Zsh…"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/willmendesneto/vhost.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/vhost
+git clone https://github.com/willmendesneto/frontend-search.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/frontend-search
 git clone git@github.com:paulirish/git-open.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/git-open
+
+
+echo "Oh My Zsh Downloaded. Please make sure that you added the plugins in your ~/.zshrc"
+echo "plugins=(zsh-syntax-highlighting zsh-autosuggestions vhost frontend-search git-open)"
 
 # ------------------------------------------------------------------------------
 log "Installing NodeJS…"
