@@ -67,12 +67,6 @@ echo "plugins=(zsh-syntax-highlighting zsh-autosuggestions vhost frontend-search
 log "Installing NodeJS…"
 [ -d ~/.nvm ] || (wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh)
 
-# ------------------------------------------------------------------------------
-log "Setting up jenv…"
-mkdir -p ~/.jenv/versions
-for jdk in /Library/Java/JavaVirtualMachines/jdk1.*/Contents/Home; do
-  jenv add $jdk
-done
 
 # ------------------------------------------------------------------------------
 log "Installing vim-plug…"
