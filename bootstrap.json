@@ -8,7 +8,6 @@
   ],
   "casks": [
     "appcleaner",
-    "ack",
     "atom",
     "franz",
     "caffeine",
@@ -47,6 +46,7 @@
   "formulas": [
     "ag",
     "archey",
+    "ack",
     "bfg",
     "caskroom/cask/brew-cask",
     "chromedriver",
