@@ -9,7 +9,6 @@ atom-typescript \
 auto-reveal-in-sidebar \
 autocomplete-paths \
 blame \
-coffee-compile \
 editorconfig \
 emmet \
 file-icons \
