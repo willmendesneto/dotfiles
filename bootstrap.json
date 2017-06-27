@@ -59,7 +59,6 @@
     "heroku-toolbelt",
     "httpie",
     "imagemagick",
-    "jenv",
     "jq",
     "phantomjs",
     "pyenv",
@@ -81,7 +80,6 @@
   },
   "taps": [
     "caskroom/versions",
-    "caskroom/fonts",
-    "jenv/jenv"
+    "caskroom/fonts"
   ]
 }
