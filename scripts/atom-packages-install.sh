@@ -15,7 +15,6 @@ file-icons \
 git-plus \
 highlight-selected \
 language-babel \
-language-coffeescript-html \
 language-javascript-jsx \
 linter \
 merge-conflicts \
