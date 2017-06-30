@@ -48,10 +48,6 @@ export UPDATE_ZSH_DAYS=1
 
 plugins=(z git-open ruby rvm node nvm npm frontend-search git-extras bundler docker httpie colored-man colored-man-pages zsh-syntax-highlighting zsh-autosuggestions vhost)
 
-# User configuration
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/9.5/bin:$HOME/.node/bin:$PATH"
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
