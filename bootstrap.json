@@ -49,9 +49,6 @@
     "imagemagick",
     "jq",
     "ruby-build",
-    "toilet",
-    "tor",
-    "torsocks",
     "trash",
     "tree",
     "wget"
