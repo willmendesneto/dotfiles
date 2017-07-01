@@ -53,6 +53,8 @@ git_repo https://github.com/mbadolato/iTerm2-Color-Schemes.git ~/.iterm-schemes
 log "Installing Oh My Zsh…"
 [ -d ~/.oh-my-zsh ] || (curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh)
 
+rm -rf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/*
+
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/willmendesneto/vhost.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/vhost
