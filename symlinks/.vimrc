@@ -54,14 +54,14 @@ Plugin 'majutsushi/tagbar'
 Plugin 'pangloss/vim-javascript'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'fatih/vim-go'
 Plugin 'klen/python-mode'
 Plugin 'plasticboy/vim-markdown'
-
+Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-scripts/c.vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'hylang/vim-hy'
+Plugin 'leafgarland/typescript-vim'
 
 " databases
 Plugin 'vim-scripts/SQLUtilities'
@@ -110,6 +110,9 @@ set wildmenu
 set noshowmode
 set cmdheight=1
 " set autoread
+" Show ruler on column 80
+set colorcolumn=120
+set textwidth=120
 
 " backup/persistance settings
 set undodir=~/.vim/tmp/undo//
