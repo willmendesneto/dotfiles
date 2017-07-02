@@ -20,6 +20,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'gmarik/vundle'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 " vim main plugins
 Plugin 'sjl/gundo.vim'
@@ -61,7 +62,9 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-scripts/c.vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'hylang/vim-hy'
-Plugin 'leafgarland/typescript-vim'
+Plugin 'ap/vim-css-color'
+Plugin 'lepture/vim-css'
+Plugin 'hail2u/vim-css3-syntax'
 
 " databases
 Plugin 'vim-scripts/SQLUtilities'
@@ -162,7 +165,8 @@ nnoremap <leader>1 :GundoToggle<CR>
 set pastetoggle=<leader>2
 nnoremap <leader>3 :TlistToggle<CR>
 nnoremap <leader>4 :TagbarToggle<CR>
-nnoremap <leader>5 :NERDTreeToggle<CR>
+" nnoremap <leader>5 :NERDTreeToggle<CR>
+map <silent> <C-k>b :NERDTreeToggle<CR>
 
 " visual reselect of just pasted
 nnoremap gp `[v`]
@@ -489,3 +493,30 @@ let g:bufExplorerFindActive=0
 set colorcolumn=
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+
+" Vim CSS3 configuration
+augroup VimCSS3Syntax
+  autocmd!
+  autocmd FileType css setlocal iskeyword+=-
+augroup END
+
+:highlight VendorPrefix guifg=#00ffff gui=bold
+:match VendorPrefix /-\(moz\|webkit\|o\|ms\)-[a-zA-Z-]\+/
+
+" vim Nerd commenter configuration
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
