@@ -54,7 +54,6 @@
     "wget"
   ],
   "symlinks": {
-    ".cli": "~",
     ".gemrc": "~",
     ".gitconfig": "~",
     ".vimrc": "~",

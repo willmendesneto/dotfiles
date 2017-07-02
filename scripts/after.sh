@@ -50,6 +50,11 @@ log "Updating iterm schemes…"
 git_repo https://github.com/mbadolato/iTerm2-Color-Schemes.git ~/.iterm-schemes
 
 # ------------------------------------------------------------------------------
+log "Copying .cli folder"
+rm -rf ~/.cli && cp -r ~/.cider/symlinks/.cli ~/.cli
+
+# ------------------------------------------------------------------------------
+
 log "Installing Oh My Zsh…"
 [ -d ~/.oh-my-zsh ] || (curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh)
 
