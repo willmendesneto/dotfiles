@@ -105,7 +105,7 @@ set ls=2
 " set cursorline
 set nowrap
 set backspace=indent,eol,start
-set shell=/bin/bash
+set shell=zsh
 set completeopt -=preview
 set textwidth=100
 set wildmenu

@@ -58,7 +58,8 @@
     ".gemrc": "~",
     ".gitconfig": "~",
     ".vimrc": "~",
-    ".zshrc": "~"
+    ".zshrc": "~",
+    ".zshenv": "~"
   },
   "taps": [
     "caskroom/versions",
