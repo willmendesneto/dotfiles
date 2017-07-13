@@ -52,7 +52,8 @@
     "ruby-build",
     "trash",
     "tree",
-    "wget"
+    "wget",
+    "awscli"
   ],
   "symlinks": {
     ".gemrc": "~",
