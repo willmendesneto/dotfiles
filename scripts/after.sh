@@ -85,6 +85,3 @@ log "Cleaning up brew…"
 brew linkapps
 brew prune
 brew cleanup --force -s
-
-log "Add Git UP python package…"
-pip install git-up
