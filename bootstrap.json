@@ -10,6 +10,7 @@
   "casks": [
     "appcleaner",
     "atom",
+    "java",
     "caffeine",
     "firefox",
     "flash-player",
@@ -21,7 +22,6 @@
     "google-hangouts",
     "gpgtools",
     "iterm2-nightly",
-    "java",
     "screenhero",
     "shiftit",
     "spotify",
