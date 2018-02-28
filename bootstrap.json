@@ -2,14 +2,12 @@
   "after-scripts": [
     "./scripts/after.sh",
     "./scripts/vim-setup.sh",
-    "./scripts/atom-packages-install.sh",
     "./scripts/login.items.sh",
     "./scripts/restart.affected.sh",
     "echo '\n-- PLEASE RESTART YOUR LAPTOP --\n'"
   ],
   "casks": [
     "appcleaner",
-    "atom",
     "java",
     "caffeine",
     "firefox",
