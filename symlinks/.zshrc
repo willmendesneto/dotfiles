@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/willmendesneto/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,13 +50,21 @@ plugins=(z git-open ruby rvm node nvm npm frontend-search git-extras bundler doc
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh  
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
+
+
+export NPM_EMAIL="jonathan.haines+fe-bot@domain.com.au"
+export NPM_PASSWORD="fe-co-domain"
+export NPM_USERNAME="domain-group-frontend"
+export NPM_USER="$NPM_USERNAME"
+export NPM_PASS="$NPM_PASSWORD"
+
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
