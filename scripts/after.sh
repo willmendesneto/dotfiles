@@ -55,6 +55,9 @@ rm -rf ~/.cli && cp -r ~/.cider/symlinks/.cli ~/.cli
 
 # ------------------------------------------------------------------------------
 
+log "Installing fonts"
+git clone https://github.com/willmendesneto/font-library.git && cp ./font-library/**/*.{ttf,otf} ~/Library/Fonts && rm -rf font-library
+
 log "Installing Oh My Zsh…"
 [ -d ~/.oh-my-zsh ] || (curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh)
 
