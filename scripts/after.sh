@@ -67,7 +67,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/willmendesneto/vhost.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/vhost
 git clone https://github.com/willmendesneto/frontend-search.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/frontend-search
-git clone git@github.com:paulirish/git-open.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/git-open
+git clone https://github.com/paulirish/git-open.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/git-open
 
 log "Creating links"
 rm -rf ~/.zshrc && ln -s ~/.cider/symlinks/.zshrc ~/.zshrc
