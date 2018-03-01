@@ -69,6 +69,8 @@ git clone https://github.com/willmendesneto/vhost.git ${ZSH_CUSTOM:-~/.oh-my-zsh
 git clone https://github.com/willmendesneto/frontend-search.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/frontend-search
 git clone git@github.com:paulirish/git-open.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/git-open
 
+log "Creating links"
+rm -rf ~/.zshrc && ln -s ~/.cider/symlinks/.zshrc ~/.zshrc
 
 echo "Oh My Zsh Downloaded. Please make sure that you added the plugins in your ~/.zshrc"
 echo "plugins=(zsh-syntax-highlighting zsh-autosuggestions vhost frontend-search git-open)"
