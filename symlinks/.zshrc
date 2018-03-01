@@ -58,14 +58,6 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
-
-export NPM_EMAIL="jonathan.haines+fe-bot@domain.com.au"
-export NPM_PASSWORD="fe-co-domain"
-export NPM_USERNAME="domain-group-frontend"
-export NPM_USER="$NPM_USERNAME"
-export NPM_PASS="$NPM_PASSWORD"
-
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
