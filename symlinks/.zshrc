@@ -46,7 +46,7 @@ export UPDATE_ZSH_DAYS=1
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(z git-open ruby rvm node nvm npm frontend-search git-extras bundler docker httpie colored-man colored-man-pages zsh-syntax-highlighting zsh-autosuggestions vhost)
+plugins=(git nvm z git-open ruby rvm node nvm npm frontend-search git-extras bundler docker docker-compose httpie colored-man colored-man-pages zsh-syntax-highlighting zsh-autosuggestions vhost)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -59,6 +59,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 export NVM_DIR="$HOME/.nvm"
 
+export GITHUB_DIFF_TOKEN="<add-your-token-here>"
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -81,9 +82,16 @@ export NVM_DIR="$HOME/.nvm"
 bindkey '^R' history-incremental-search-backward
 
 # Run Archey
-archey --color
+# archey --color
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+if [ -d ~/.cli ]; then
+ CLI_FILES=$(find ~/.cli -maxdepth 2 -type f)
+  while read -r line; do
+    source $line
+  done <<< "$CLI_FILES"
+fi
 
 # Load RVM
 if [ -d ~/.rvm ]; then
@@ -91,3 +99,7 @@ if [ -d ~/.rvm ]; then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

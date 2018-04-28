@@ -2,8 +2,9 @@ alias nv="node -v"
 alias ni="npm install"
 alias nt="npm test"
 alias ns="npm start"
-alias nl="npm start"
+alias nl="npm link"
 alias nr="npm run"
+alias ne2e="npm run e2e"
 
 # YARN aliases
 alias yarnglobal="npm install -g yarn"
