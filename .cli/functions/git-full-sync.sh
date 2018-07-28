@@ -1,8 +1,5 @@
 #!/bin/bash
 # Fully sync the remote repo with the local repo
-# by:
-#  https://github.com/{amferraz,robsonpeixoto}
-
 function git-full-sync() {
 
   # get current branch name

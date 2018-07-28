@@ -46,7 +46,27 @@ export UPDATE_ZSH_DAYS=1
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git nvm z git-open ruby rvm node nvm npm frontend-search git-extras bundler docker docker-compose httpie colored-man colored-man-pages zsh-syntax-highlighting zsh-autosuggestions vhost)
+plugins=(
+  git
+  nvm
+  z
+  git-open
+  ruby
+  rvm
+  node
+  nvm
+  npm
+  frontend-search
+  git-extras
+  bundler
+  docker
+  docker-compose
+  colored-man
+  colored-man-pages
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  vhost
+)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -60,6 +80,16 @@ export EDITOR='vim'
 export NVM_DIR="$HOME/.nvm"
 
 export GITHUB_DIFF_TOKEN="<add-your-token-here>"
+
+export EDITOR='vim'
+export NVM_DIR="$HOME/.nvm"
+
+export NPM_EMAIL="<add-your-npm-email-here>"
+export NPM_PASSWORD="<add-your-npm-password-here>"
+export NPM_USERNAME="<add-your-npm-username-here>"
+export NPM_USER="$NPM_USERNAME"
+export NPM_PASS="$NPM_PASSWORD"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -84,7 +114,7 @@ bindkey '^R' history-incremental-search-backward
 # Run Archey
 # archey --color
 
-test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+# test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 if [ -d ~/.cli ]; then
  CLI_FILES=$(find ~/.cli -maxdepth 2 -type f)
@@ -98,8 +128,8 @@ if [ -d ~/.rvm ]; then
   source "$HOME/.rvm/scripts/rvm"  # This loads RVM
 fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$PATH:$HOME/.rvm/bin:$HOME/.nvm/bin" # Add RVM and NVM to PATH for scripting
