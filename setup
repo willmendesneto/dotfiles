@@ -14,4 +14,21 @@ echo "Running 'install.sh' script to install dependencies..."
 chmod +x ./dotfiles/install.sh
 ./dotfiles/install.sh
 
-echo "\n-- ALL INSTALLED. NOW YOU ARE GOOD TO GO 👏👏👏👏 --\n"
+tput setaf 3;
+echo "
+
+-- ALL INSTALLED. NOW YOU ARE GOOD TO GO 👏👏👏👏 --
+Please check your '~/.zshrc' and update the values of your environment variables
+
+-----------------------------------------------------------------------------------
+NPM_EMAIL='<add-your-npm-email-here>' with the your NPM email
+NPM_PASSWORD='<add-your-npm-password-here>' with the your NPM email
+NPM_USERNAME='<add-your-npm-username-here>' with the your NPM username
+GITHUB_DIFF_TOKEN='<add-your-token-here>' with the your Github token.
+-----------------------------------------------------------------------------------
+
+** How to create a personal access token with the *notifications* and *repo* permissions. https://github.com/settings/tokens/new?scopes=notifications,repo
+-- AFTER THAT, PLEASE RESTART YOUR CLI AND START CODING! --
+
+"
+tput sgr0;
