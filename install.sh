@@ -73,6 +73,10 @@ echo "Oh My Zsh Downloaded. Please make sure that you added the plugins in your 
 # ------------------------------------------------------------------------------
 log "Installing NodeJS via NVM…"
 [ -d ~/.nvm ] || (wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh)
+./.nvm/nvm.sh
+nvm install v7.10.1
+nvm use v7.10.1
+nvm alias default v7.10.1
 
 log "Installing Ruby via RVM…"
 [ -d ~/.rvm ] || (curl -sSL https://get.rvm.io | bash)
@@ -99,3 +103,10 @@ rm -rf ~/Brewfile
 
 log "Removing the cloned '~/dotfiles' repository"
 rm -rf ~/dotfiles
+
+log "Installing Redis Desktop Manager 'Medis'"
+[ -d ~/medis ] || git clone https://github.com/luin/medis.git ~/medis
+cd ~/medis
+npm install && npm run pack
+cp -rf out/Medis-mas-x64/Medis.app /Applications/
+cd ~ && rm -rf ~/medis
