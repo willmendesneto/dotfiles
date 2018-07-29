@@ -11,8 +11,39 @@ command -v brew   >/dev/null || ruby -e "$(curl -fsSL https://raw.githubusercont
 
 echo "Running 'install.sh' script to install dependencies..."
 
+SKIP_BREW_CLEANUP="false"
+DEFAULT_RUBY_VERSION="2.3.3"
+DEFAULT_NODE_VERSION="v7.10.1"
+
+for i in "$@"
+do
+  case $i in
+    --ruby-version=*)
+    DEFAULT_RUBY_VERSION="${i#*=}"
+    shift # past argument=value
+    ;;
+    --node-version=*)
+    DEFAULT_NODE_VERSION="${i#*=}"
+    shift # past argument=value
+    ;;
+    --skip-brew-cleanup=*)
+    SKIP_BREW_CLEANUP="${i#*=}"
+    shift # past argument=value
+    ;;
+    --default)
+    shift # past argument with no value
+    ;;
+    *)
+      # unknown option
+    ;;
+  esac
+done
+
 chmod +x ./dotfiles/install.sh
-./dotfiles/install.sh
+
+DEFAULT_RUBY_VERSION=$DEFAULT_RUBY_VERSION \
+DEFAULT_NODE_VERSION=$DEFAULT_NODE_VERSION \
+SKIP_BREW_CLEANUP=$SKIP_BREW_CLEANUP ./dotfiles/install.sh
 
 tput setaf 3;
 echo "

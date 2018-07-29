@@ -35,6 +35,15 @@ echo ">"
 echo ">>"
 echo ">>> Start the setup ..."
 
+log "
+
+This script is running using this configuration
+
+Default Ruby Version: $DEFAULT_RUBY_VERSION
+Default NodeJS Version: $DEFAULT_NODE_VERSION
+Should skip 'brew cleanup' before run 'brew bundle'? : $SKIP_BREW_CLEANUP
+
+"
 # ------------------------------------------------------------------------------
 log "Copying '.cli' folder"
 rm -rf ~/.cli && cp -rf ~/dotfiles/.cli ~/.cli
@@ -73,16 +82,16 @@ echo "Oh My Zsh Downloaded. Please make sure that you added the plugins in your 
 # ------------------------------------------------------------------------------
 log "Installing NodeJS via NVM…"
 [ -d ~/.nvm ] || (wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh)
-./.nvm/nvm.sh
-nvm install v7.10.1
-nvm use v7.10.1
-nvm alias default v7.10.1
+. ~/.nvm/nvm.sh
+nvm install $DEFAULT_NODE_VERSION
+nvm use $DEFAULT_NODE_VERSION
+nvm alias default $DEFAULT_NODE_VERSION
 
 log "Installing Ruby via RVM…"
 [ -d ~/.rvm ] || (curl -sSL https://get.rvm.io | bash)
-./.rvm/scripts/rvm
-rvm install 2.3.3
-rvm use 2.3.3 --default
+. ~/.rvm/scripts/rvm
+rvm install $DEFAULT_RUBY_VERSION
+rvm use $DEFAULT_RUBY_VERSION --default
 
 # ------------------------------------------------------------------------------
 # log "Installing vim-plug…"
@@ -90,11 +99,17 @@ rvm use 2.3.3 --default
 #   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # ------------------------------------------------------------------------------
-log "Cleaning up brew…"
-rm -rf ~/Brewfile && cp -rf ~/dotfiles/Brewfile ~/Brewfile
-brew linkapps
-brew prune
-brew cleanup --force -s
+
+if [ "$SKIP_BREW_CLEANUP" == "true" ]
+then
+  log "Skipping Homebrew cleanup…"
+else
+  log "Cleaning up brew…"
+  rm -rf ~/Brewfile && cp -rf ~/dotfiles/Brewfile ~/Brewfile
+  brew linkapps
+  brew prune
+  brew cleanup --force -s
+fi
 
 log "Installing brew dependencies…"
 brew update
@@ -107,6 +122,11 @@ rm -rf ~/dotfiles
 log "Installing Redis Desktop Manager 'Medis'"
 [ -d ~/medis ] || git clone https://github.com/luin/medis.git ~/medis
 cd ~/medis
+nvm install v7.10.1
+nvm use v7.10.1
+nvm alias default v7.10.1
 npm install && npm run pack
 cp -rf out/Medis-mas-x64/Medis.app /Applications/
 cd ~ && rm -rf ~/medis
+nvm use "$DEFAULT_NODE_VERSION"
+nvm alias default "$DEFAULT_NODE_VERSION"

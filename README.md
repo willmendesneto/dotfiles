@@ -12,6 +12,14 @@
 https://raw.githubusercontent.com/willmendesneto/dotfiles/master/setup | bash
 ```
 
+
+## Options
+
+- `--ruby-version`: Default Ruby Version to be installed when the script is running. Default value: `2.3.3`;
+- `--node-version`: Default NodeJS Version to be installed when the script is running. Default value: `v7.10.1`. Please pass the value with `v` as prefix;
+- `--skip-brew-cleanup`: Should skip 'brew cleanup' before run 'brew bundle'? Default value: `false`
+
+
 ## Tools
 
 This command will install
