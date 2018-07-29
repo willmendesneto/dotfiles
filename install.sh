@@ -64,6 +64,9 @@ git clone https://github.com/willmendesneto/vhost.git ${ZSH_CUSTOM:-~/.oh-my-zsh
 git clone https://github.com/willmendesneto/frontend-search.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/frontend-search
 git clone https://github.com/paulirish/git-open.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/git-open
 
+log "Installing 'Hyper-Oh-My-ZSH' theme"
+mkdir -p $ZSH_CUSTOM/themes && wget -O $ZSH_CUSTOM/themes/hyper-oh-my-zsh.zsh-theme https://raw.githubusercontent.com/willmendesneto/hyper-oh-my-zsh/master/hyper-oh-my-zsh.zsh-theme
+
 log "Adding ZSH, VIM, GIT and RUBY GEM files into user root folder"
 cp -f ~/dotfiles/.zshrc ~/.zshrc-old-dotfiles
 cp -f ~/dotfiles/.zshenv ~/.zshenv-old-dotfiles
