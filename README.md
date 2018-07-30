@@ -15,6 +15,16 @@ https://raw.githubusercontent.com/willmendesneto/dotfiles/master/setup | bash
 
 ## Options
 
+If you want to use the options, you need to clone this project and run the `setup` file locally *like the command below*
+
+```bash
+git clone https://github.com/willmendesneto/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+./setup [options]
+```
+
+> You should clone this project locally to `~/dotfiles` in that case to avoid any possible issue
+
 - `--ruby-version`: Default Ruby Version to be installed when the script is running. Default value: `2.3.3`;
 - `--node-version`: Default NodeJS Version to be installed when the script is running. Default value: `v7.10.1`. Please pass the value with `v` as prefix;
 - `--skip-brew-cleanup`: Should skip 'brew cleanup' before run 'brew bundle'? Default value: `false`
