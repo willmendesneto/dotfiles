@@ -44,6 +44,25 @@ Default NodeJS Version: $DEFAULT_NODE_VERSION
 Should skip 'brew cleanup' before run 'brew bundle'? : $SKIP_BREW_CLEANUP
 
 "
+
+# ------------------------------------------------------------------------------
+
+if [ "$SKIP_BREW_CLEANUP" == "true" ]
+then
+  log "Skipping Homebrew cleanup…"
+else
+  log "Cleaning up brew…"
+  rm -rf ~/Brewfile && cp -rf ~/dotfiles/Brewfile ~/Brewfile
+  brew linkapps
+  brew prune
+  brew cleanup --force -s
+fi
+
+log "Installing brew dependencies…"
+brew update
+brew bundle
+rm -rf ~/Brewfile
+
 # ------------------------------------------------------------------------------
 log "Copying '.cli' folder"
 rm -rf ~/.cli && cp -rf ~/dotfiles/.cli ~/.cli
@@ -55,8 +74,9 @@ git clone https://github.com/willmendesneto/font-library.git && cp -f ./font-lib
 
 log "Installing Oh My Zsh…"
 [ -d ~/.oh-my-zsh ] || (curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh)
+ZSH_CUSTOM="~/.oh-my-zsh/custom"
 
-rm -rf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/*
+rm -rf ${ZSH_CUSTOM}/plugins/*
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -102,23 +122,6 @@ rvm use $DEFAULT_RUBY_VERSION --default
 #   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # ------------------------------------------------------------------------------
-
-if [ "$SKIP_BREW_CLEANUP" == "true" ]
-then
-  log "Skipping Homebrew cleanup…"
-else
-  log "Cleaning up brew…"
-  rm -rf ~/Brewfile && cp -rf ~/dotfiles/Brewfile ~/Brewfile
-  brew linkapps
-  brew prune
-  brew cleanup --force -s
-fi
-
-log "Installing brew dependencies…"
-brew update
-brew bundle
-rm -rf ~/Brewfile
-
 log "Removing the cloned '~/dotfiles' repository"
 rm -rf ~/dotfiles
 
