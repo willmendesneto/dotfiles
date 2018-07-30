@@ -24,6 +24,7 @@ https://raw.githubusercontent.com/willmendesneto/dotfiles/master/setup | bash
 
 This command will install
 - Oh-my-ZSH with all the required configuration
+  - [hyper-oh-my-zsh](https://github.com/willmendesneto/hyper-oh-my-zsh) as default Oh-My-ZSH theme
 - homebrew with all your brew dependencies specified in your `Brewfile`
   - VSCode as editor
   - Postman for HTTP validations/simulations
@@ -56,6 +57,17 @@ After that you need to change the `iTerm2` preferences
 <img width="908" alt="preferences-general" src="https://user-images.githubusercontent.com/1252570/43366018-77a9dd32-9379-11e8-9666-79c6854eb51d.png">
 <img width="1040" alt="preferences-profiles-colors" src="https://user-images.githubusercontent.com/1252570/43366019-77e360fc-9379-11e8-9fa6-5085f3ca871f.png">
 
+After that, this should be your terminal
+
+
+
+### Inside a folder without git configuration
+
+<img width="682" alt="Hyper Oh-My-ZSH - Inside a folder without git configuration" src="https://user-images.githubusercontent.com/1252570/43366463-d48d9f68-9381-11e8-9871-9166c6c29da6.png">
+
+### Inside a folder with git configuration
+
+<img width="682" alt="Hyper Oh-My-ZSH - Inside a folder with git configuration" src="https://user-images.githubusercontent.com/1252570/43366555-1a7e5eb2-9383-11e8-89d5-98b255968bdb.png">
 
 
 ## Author
