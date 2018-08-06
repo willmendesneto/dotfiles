@@ -1,0 +1,1 @@
+alias bs="bolt start"
