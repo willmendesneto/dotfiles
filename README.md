@@ -9,7 +9,7 @@
 ## How to install
 
 ```bash
-https://raw.githubusercontent.com/willmendesneto/dotfiles/master/setup | bash
+curl https://raw.githubusercontent.com/willmendesneto/dotfiles/master/setup | bash
 ```
 
 
