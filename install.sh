@@ -53,7 +53,6 @@ then
 else
   log "Cleaning up brew…"
   rm -rf ~/Brewfile && cp -rf ~/dotfiles/Brewfile ~/Brewfile
-  brew prune
   brew cleanup --force -s
 fi
 
