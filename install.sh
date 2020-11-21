@@ -53,7 +53,7 @@ then
 else
   log "Cleaning up brew…"
   rm -rf ~/Brewfile && cp -rf ~/dotfiles/Brewfile ~/Brewfile
-  brew cleanup --force -s
+  brew cleanup --prune -s
 fi
 
 log "Installing brew dependencies…"
