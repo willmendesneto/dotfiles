@@ -73,15 +73,13 @@ git clone https://github.com/willmendesneto/font-library.git && cp -f ./font-lib
 log "Installing Oh My Zsh…"
 [ -d ~/.oh-my-zsh ] || (curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh)
 
-DEFAULT_ZSH_CUSTOM="~/.oh-my-zsh/custom"
+rm -rf ~/.oh-my-zsh/custom/plugins/*
 
-rm -rf ${DEFAULT_ZSH_CUSTOM}/plugins/*
-
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${DEFAULT_ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions.git ${DEFAULT_ZSH_CUSTOM}/plugins/zsh-autosuggestions
-git clone https://github.com/willmendesneto/vhost.git ${DEFAULT_ZSH_CUSTOM}/plugins/vhost
-git clone https://github.com/willmendesneto/frontend-search.git ${DEFAULT_ZSH_CUSTOM}/plugins/frontend-search
-git clone https://github.com/paulirish/git-open.git ${DEFAULT_ZSH_CUSTOM}/plugins/git-open
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/willmendesneto/vhost.git ~/.oh-my-zsh/custom/plugins/vhost
+git clone https://github.com/willmendesneto/frontend-search.git ~/.oh-my-zsh/custom/plugins/frontend-search
+git clone https://github.com/paulirish/git-open.git ~/.oh-my-zsh/custom/plugins/git-open
 
 log "Installing 'Hyper-Oh-My-ZSH' theme"
 mkdir -p $DEFAULT_ZSH_CUSTOM/themes && wget -O $DEFAULT_ZSH_CUSTOM/themes/hyper-oh-my-zsh.zsh-theme https://raw.githubusercontent.com/willmendesneto/hyper-oh-my-zsh/master/hyper-oh-my-zsh.zsh-theme
