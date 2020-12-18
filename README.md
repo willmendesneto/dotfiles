@@ -55,6 +55,9 @@ This command will install
 
 Unfortunately, there are some steps you need to do manually for now.
 
+### Fliqlo Screensaver
+
+Please, access https://fliqlo.com/#/screensaver, download the screensaver and install it manually.
 
 ### iTerm2 configuration
 
