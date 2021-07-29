@@ -3,7 +3,12 @@ set -eu
 
 cd $HOME
 
-git clone https://github.com/willmendesneto/dotfiles.git ~/dotfiles
+if [ -d "~/dotfiles" ]; then
+  echo "Folder dotfiles already exists. Moving to next step..."
+else
+  echo "Cloning dotfiles repository ..."
+  git clone https://github.com/willmendesneto/dotfiles.git ~/dotfiles
+fi
 
 echo "Installing Homebrew..."
 
@@ -13,7 +18,7 @@ echo "Running 'install.sh' script to install dependencies..."
 
 SKIP_BREW_CLEANUP="false"
 DEFAULT_RUBY_VERSION="2.3.3"
-DEFAULT_NODE_VERSION="v7.10.1"
+DEFAULT_NODE_VERSION="v14.7.3"
 
 for i in "$@"
 do
