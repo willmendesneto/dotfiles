@@ -59,6 +59,10 @@ Unfortunately, there are some steps you need to do manually for now.
 
 Please, access https://fliqlo.com/#/screensaver, download the screensaver and install it manually.
 
+### VSCode configuration
+
+Please, replace your `settings.json` with the content of this gist https://gist.github.com/willmendesneto/463d93a3a381c7b3f29bf25d6c22dc62
+
 ### iTerm2 configuration
 
 First of all, follow the instructions in the post [Use ⌥ ← and ⌥→ to jump forwards / backwards words in iTerm 2, on OS X](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x) and apply these changes.
