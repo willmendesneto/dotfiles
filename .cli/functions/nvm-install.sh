@@ -1,10 +1,12 @@
+# Installs NodeJS version and adds it as default in your OS using NVM
 #
 # How to Use
-# nvm-install "$(cat .nvmrc)"
+#
+# $ nvm-install "$(cat .nvmrc)"
 #
 # or
 #
-# nvm-install <your-version-here>
+# $ nvm-install <node-version>
 #
 
 function nvm-install() {
