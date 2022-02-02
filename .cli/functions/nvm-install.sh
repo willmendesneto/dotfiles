@@ -1,3 +1,12 @@
+/**
+ * How to Use
+ * nvm-install "$(cat .nvmrc)"
+ *
+ * or
+ *
+ * nvm-install <your-version-here>
+ */
+
 function nvm-install() {
   if [[ -n "$1" ]]; then
     echo "Installing NodeJS ${1} ..."
