@@ -115,6 +115,10 @@ bindkey '^R' history-incremental-search-backward
 
 # test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
+# Adding Homebrew in our PATH
+export PATH="/opt/homebrew/bin:$PATH"
+
+
 if [ -d ~/.cli ]; then
  CLI_FILES=$(find ~/.cli -maxdepth 2 -type f)
   while read -r line; do
