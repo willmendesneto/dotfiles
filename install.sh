@@ -108,10 +108,13 @@ nvm use $DEFAULT_NODE_VERSION
 nvm alias default $DEFAULT_NODE_VERSION
 
 log "Installing Ruby via RVM…"
+
+set +u
 [ -d ~/.rvm ] || (curl -sSL https://get.rvm.io | bash)
 . ~/.rvm/scripts/rvm
 rvm install $DEFAULT_RUBY_VERSION
 rvm use $DEFAULT_RUBY_VERSION --default
+set -u
 
 # ------------------------------------------------------------------------------
 # log "Installing vim-plug…"
