@@ -18,7 +18,7 @@ echo "Running 'install.sh' script to install dependencies..."
 
 SKIP_BREW_CLEANUP="false"
 DEFAULT_RUBY_VERSION="2.3.3"
-DEFAULT_NODE_VERSION="v14.7.3"
+DEFAULT_NODE_VERSION="v16.18.0"
 
 for i in "$@"
 do
