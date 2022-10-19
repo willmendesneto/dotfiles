@@ -107,15 +107,6 @@ nvm install $DEFAULT_NODE_VERSION
 nvm use $DEFAULT_NODE_VERSION
 nvm alias default $DEFAULT_NODE_VERSION
 
-log "Installing Ruby via RVM…"
-
-set +u
-[ -d ~/.rvm ] || (curl -sSL https://get.rvm.io | bash)
-. ~/.rvm/scripts/rvm
-rvm install $DEFAULT_RUBY_VERSION
-rvm use $DEFAULT_RUBY_VERSION --default
-set -u
-
 # ------------------------------------------------------------------------------
 # log "Installing vim-plug…"
 # curl -s -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -124,15 +115,3 @@ set -u
 # ------------------------------------------------------------------------------
 log "Removing the cloned '~/dotfiles' repository"
 rm -rf ~/dotfiles
-
-log "Installing Redis Desktop Manager 'Medis'"
-[ -d ~/medis ] || git clone https://github.com/luin/medis.git ~/medis
-cd ~/medis
-nvm install v7.10.1
-nvm use v7.10.1
-nvm alias default v7.10.1
-npm install && npm run pack
-cp -rf out/Medis-mas-x64/Medis.app /Applications/
-cd ~ && rm -rf ~/medis
-nvm use "$DEFAULT_NODE_VERSION"
-nvm alias default "$DEFAULT_NODE_VERSION"
