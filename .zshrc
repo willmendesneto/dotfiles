@@ -61,7 +61,6 @@ plugins=(
   bundler
   docker
   docker-compose
-  colored-man
   colored-man-pages
   zsh-syntax-highlighting
   zsh-autosuggestions
