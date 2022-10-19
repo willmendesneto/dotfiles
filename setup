@@ -3,7 +3,7 @@ set -eu
 
 cd $HOME
 
-if [ -d "~/dotfiles" ]; then
+if [ -d "$HOME/dotfiles" ]; then
   echo "Folder dotfiles already exists. Moving to next step..."
 else
   echo "Cloning dotfiles repository ..."
